@@ -10,9 +10,9 @@ interface WrapperProps {
 export const Wrapper: React.FC<WrapperProps> = ({ children, variant }) => {
   return (
     <Box
-      mt={[4, 8, 16]}
+      mt={[4, 8, 8]}
       mx="auto"
-      maxW={variant === "regular" ? "800px" : "500px"}
+      maxW={variant === "regular" ? "900px" : "500px"}
       w={["90%", "90%", "100%"]}
       shadow="4px 4px 20px #bababa"
       borderRadius={10}
