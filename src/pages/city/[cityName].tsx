@@ -8,7 +8,6 @@ import { DataType } from "../../types";
 
 const city = ({ data }: { data: DataType }) => {
   const router = useRouter();
-  console.log(data);
 
   return (
     <Wrapper variant="small">

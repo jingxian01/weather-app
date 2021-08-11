@@ -4,7 +4,6 @@ import { Wrapper } from "../../components/Wrapper";
 import { OneCallData } from "../../types";
 
 const coord = ({ data }) => {
-  console.log("data", data);
   return <Result data={data} />;
 };
 
