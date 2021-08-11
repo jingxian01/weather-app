@@ -1,4 +1,4 @@
-import { ArrowLeftIcon } from "@chakra-ui/icons";
+import { ArrowLeftIcon, SearchIcon } from "@chakra-ui/icons";
 import { Box, Button, HStack } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import { useRouter } from "next/dist/client/router";
@@ -41,13 +41,12 @@ export const index: React.FC<indexProps> = ({}) => {
                 back
               </Button>
               <Button
+                leftIcon={<SearchIcon boxSize="0.8em" />}
                 shadow="md"
                 type="submit"
-                pl={10}
-                pr={10}
                 colorScheme="blue"
               >
-                enter
+                search
               </Button>
             </HStack>
           </Form>

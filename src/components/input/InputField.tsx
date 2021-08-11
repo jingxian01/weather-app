@@ -1,5 +1,6 @@
 import {
   FormControl,
+  FormErrorMessage,
   FormHelperText,
   FormLabel,
   Input,
@@ -20,7 +21,7 @@ export const InputField: React.FC<InputFieldProps> = ({
   message,
   ...props
 }) => {
-  const [field] = useField(props);
+  const [field, { error }] = useField(props);
 
   return (
     <FormControl isRequired={isRequired}>

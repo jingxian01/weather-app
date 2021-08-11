@@ -1,21 +1,73 @@
 export interface DataType {
   cod: string;
   name: string;
-  main: Main;
+  sys: Sys;
   coord: Coordinate;
   message?: string;
 }
 
-interface Main {
-  feels_like: number;
-  humidity: number;
-  pressure: number;
-  temp: number;
-  temp_max: number;
-  temp_min: number;
+interface Sys {
+  country: string;
 }
 
 interface Coordinate {
   lat: number;
   lon: number;
+}
+
+interface Weather {
+  id: number;
+  main: string;
+  description: string;
+  icon: string;
+}
+
+export interface OneCallData {
+  current: Current;
+  daily: [Daily];
+  lat: number;
+  lon: number;
+  timezone: string;
+}
+
+interface Current {
+  weather: [Weather];
+  dt: number;
+  temp: number;
+  feels_like: number;
+  clouds: number;
+  humidity: number;
+  pressure: number;
+  sunrise: number;
+  sunset: number;
+}
+
+interface Daily {
+  weather: [Weather];
+  dt: number;
+  temp: DailyTemp;
+  feels_like: DailyFeelsLike;
+  clouds: number;
+  humidity: number;
+  pressure: number;
+  sunrise: number;
+  sunset: number;
+  moonrise: number;
+  moonset: number;
+}
+
+interface DailyTemp {
+  morn: number;
+  day: number;
+  eve: number;
+  night: number;
+  min: number;
+  max: number;
+}
+
+interface DailyFeelsLike {
+  morn: number;
+  day: number;
+  eve: number;
+  night: number;
 }
