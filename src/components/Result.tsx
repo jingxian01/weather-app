@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, VStack } from "@chakra-ui/react";
+import { Box, Flex, VStack } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import React from "react";
 import { useWindowDimensions } from "../hooks/useWindowDimension";
@@ -11,7 +11,7 @@ interface ResultProps {
 }
 
 export const Result: React.FC<ResultProps> = ({ data }) => {
-  const MapWithNoSSR = dynamic(() => import("../components/Map"), {
+  const MapWithNoSSR = dynamic(() => import("./map/Map"), {
     ssr: false,
   });
   const { width } = useWindowDimensions();

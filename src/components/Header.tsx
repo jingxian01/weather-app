@@ -6,9 +6,10 @@ interface HeaderProps {}
 export const Header: React.FC<HeaderProps> = ({}) => {
   return (
     <>
-      <Heading>Weather</Heading>
-      <Text fontSize="md" mb={8}>
-        find the current weather of your city.
+      <Heading>Weather App</Heading>
+      <Text fontSize="md">find the weather of your city.</Text>
+      <Text fontSize="sm" mb={8} fontStyle="italic" color="gray.500">
+        available for current and forecast
       </Text>
     </>
   );
