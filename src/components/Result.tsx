@@ -4,6 +4,7 @@ import React from "react";
 import { useWindowDimensions } from "../hooks/useWindowDimension";
 import { OneCallData } from "../types";
 import { CurrentWeather } from "./data/CurrentWeather";
+import { ForecastWeather } from "./data/ForecastWeather";
 
 interface ResultProps {
   data: OneCallData;
@@ -28,14 +29,26 @@ export const Result: React.FC<ResultProps> = ({ data }) => {
           </Box>
         </VStack>
       ) : (
-        <Flex>
-          <Box w="50%" height="420px">
-            <MapWithNoSSR position={[data.lat, data.lon]} />
+        <Box>
+          <Flex>
+            <Box w="50%" height="420px">
+              <MapWithNoSSR position={[data.lat, data.lon]} />
+            </Box>
+            <Box w="50%" ml={4}>
+              <CurrentWeather data={data} />
+            </Box>
+          </Flex>
+          <Box
+            mt={2}
+            fontSize="sm"
+            textAlign="center"
+            fontStyle="italic"
+            color="gray.500"
+          >
+            Scroll down for more
           </Box>
-          <Box w="50%" ml={4}>
-            <CurrentWeather data={data} />
-          </Box>
-        </Flex>
+          <ForecastWeather data={data} />
+        </Box>
       )}
     </Box>
   );

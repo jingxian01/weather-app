@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Box, Button, Flex, Image } from "@chakra-ui/react";
 import { useRouter } from "next/dist/client/router";
 import React from "react";
 import { Header } from "../components/Header";
@@ -10,9 +10,19 @@ const Index = () => {
   return (
     <Wrapper variant="regular">
       <Header />
-      <Button colorScheme="blue" onClick={() => router.push("/city")}>
-        by city name
-      </Button>
+      <Flex>
+        <Box w="50%">
+          <Image
+            src="https://images.pexels.com/photos/531767/pexels-photo-531767.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Segun Adebayo"
+          />
+        </Box>
+        <Box ml={4}>
+          <Button colorScheme="blue" onClick={() => router.push("/city")}>
+            by city name
+          </Button>
+        </Box>
+      </Flex>
     </Wrapper>
   );
 };

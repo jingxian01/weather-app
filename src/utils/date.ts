@@ -16,3 +16,8 @@ export const unixToDate = (unix: number) => {
   const date = fromUnixTime(unix);
   return format(date, "MMM d yyyy");
 };
+
+export const unixToTableDate = (unix: number) => {
+  const tableDate = fromUnixTime(unix);
+  return format(tableDate, "E (MM/dd)");
+};

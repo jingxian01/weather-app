@@ -1,4 +1,11 @@
-import { HStack, Box, Stat, StatNumber, StatHelpText } from "@chakra-ui/react";
+import {
+  HStack,
+  Box,
+  Stat,
+  StatNumber,
+  StatHelpText,
+  Image,
+} from "@chakra-ui/react";
 import React from "react";
 import { OneCallData } from "../../types";
 import { unixToTime, unixToDay, unixToDate } from "../../utils/date";
@@ -13,10 +20,12 @@ export const CurrentWeather: React.FC<currentWeatherProps> = ({ data }) => {
     <>
       <HStack>
         <Box key={data.current.weather[0].id}>
-          <img
-            src={`http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png`}
-            alt="Weather icon"
-          />
+          <Box>
+            <Image
+              src={`http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png`}
+              alt="Weather icon"
+            />
+          </Box>
           <Box fontWeight="bold" fontSize="lg">
             {data.current.weather[0].main}
           </Box>
@@ -69,7 +78,7 @@ export const CurrentWeather: React.FC<currentWeatherProps> = ({ data }) => {
           </Stat>
           <Stat>
             <StatNumber></StatNumber>
-            <StatHelpText></StatHelpText>
+            <StatHelpText>time based on your browser</StatHelpText>
           </Stat>
         </HStack>
       </Box>
