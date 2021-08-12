@@ -27,6 +27,7 @@ export const Result: React.FC<ResultProps> = ({ data }) => {
           <Box w="100%">
             <CurrentWeather data={data} />
           </Box>
+          <ForecastWeather data={data} isMobile={true} />
         </VStack>
       ) : (
         <Box>
@@ -44,10 +45,11 @@ export const Result: React.FC<ResultProps> = ({ data }) => {
             textAlign="center"
             fontStyle="italic"
             color="gray.500"
+            p={2}
           >
             Scroll down for more
           </Box>
-          <ForecastWeather data={data} />
+          <ForecastWeather data={data} isMobile={false} />
         </Box>
       )}
     </Box>

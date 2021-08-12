@@ -42,7 +42,7 @@ interface Current {
   sunset: number;
 }
 
-interface Daily {
+export interface Daily {
   weather: [Weather];
   dt: number;
   temp: DailyTemp;

@@ -5,6 +5,7 @@ import {
   StatNumber,
   StatHelpText,
   Image,
+  Flex,
 } from "@chakra-ui/react";
 import React from "react";
 import { OneCallData } from "../../types";
@@ -49,7 +50,7 @@ export const CurrentWeather: React.FC<currentWeatherProps> = ({ data }) => {
             </StatHelpText>
           </HStack>
         </Stat>
-        <HStack>
+        <Flex>
           <Stat>
             <StatNumber fontSize="md">{data.current.clouds}%</StatNumber>
             <StatHelpText fontStyle="italic">cloudiness</StatHelpText>
@@ -62,8 +63,8 @@ export const CurrentWeather: React.FC<currentWeatherProps> = ({ data }) => {
             <StatNumber fontSize="sm">{data.current.pressure} hPa</StatNumber>
             <StatHelpText fontStyle="italic">atmospheric pressure</StatHelpText>
           </Stat>
-        </HStack>
-        <HStack>
+        </Flex>
+        <Flex>
           <Stat>
             <StatNumber fontSize="md">
               {unixToTime(data.current.sunrise)}
@@ -80,7 +81,7 @@ export const CurrentWeather: React.FC<currentWeatherProps> = ({ data }) => {
             <StatNumber></StatNumber>
             <StatHelpText>time based on your browser</StatHelpText>
           </Stat>
-        </HStack>
+        </Flex>
       </Box>
     </>
   );
