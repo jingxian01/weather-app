@@ -1,5 +1,7 @@
 # weather-app
 
+a simple weather app for you to check current weather information and forecast
+
 project link: https://weather-app-jingxian.vercel.app/
 
 ![screenshot](https://im7.ezgif.com/tmp/ezgif-7-b4fd4344111b.png)
