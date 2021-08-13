@@ -4,7 +4,7 @@ a simple weather app for you to check current weather information and forecast
 
 project link: https://weather-app-jingxian.vercel.app/
 
-![screenshot](https://im7.ezgif.com/tmp/ezgif-7-b4fd4344111b.png)
+![screenshot](https://i.ibb.co/TLJN6Yq/Screenshot-2021-08-12-at-2-07-53-PM.png)
 
 ## Third party API
 Open Weather (https://openweathermap.org/api)
